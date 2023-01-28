@@ -1,0 +1,5 @@
+<div class="voiture">
+    <p>{{ theVoiture.marque }} {{ theVoiture.modele }}</p>
+    <!-- <a routerLink="/voitures/{{ theVoiture.marque }}"><button class="btn-primary">{{'Détail'}}</button></a> -->
+    <a [routerLink]="['/voitures', theVoiture.marque]"><button class="btn-primary">{{'Détail'}}</button></a>
+</div>

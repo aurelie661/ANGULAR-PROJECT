@@ -1,0 +1,9 @@
+h1{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.gestionnaire{
+    border: greenyellow 5px double;
+    text-align: center;
+    height: 222px;
+}
