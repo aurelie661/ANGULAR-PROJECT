@@ -1,12 +1,14 @@
 <h1>Liste de Pokémons</h1>
-<!-- <p (click)="selectPokemon(pokemonList[2])">{{pokemonList[2].name}}</p> -->
-<!-- <input type="number" (click)="selectPokemon($event)"> -->
 
-<input #input (keyup)="selectPokemon(input.value)" type="number" />
+<input #input (keyup.enter)="selectPokemon(input.value)" type="number" />
 
-<p>{{ pokemonSelected?.name }}</p>
-<p>{{ pokemonList[0].name }}</p>
-<p>{{ pokemonList[1].name }}</p>
-<p>{{ pokemonList[2].name }}</p>
-<p>{{ pokemonList[3].name }}</p>
-<p>{{ pokemonList[4].name }}</p>
+<p *ngIf="pokemonSelected">
+  Vous avez selectionné le pokemon: {{ pokemonSelected.name }}
+</p>
+<p *ngIf="!pokemonSelected">
+  Aucun pokemon n'a été trouvé!
+</p>
+<p *ngFor="let pokemon of pokemonList">
+    Pokémon : {{ pokemon.name }} 
+    de type : {{pokemon.types}}
+</p>
