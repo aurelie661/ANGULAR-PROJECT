@@ -2,15 +2,27 @@
 
 <div class="container">
   <div class="row">
-    <p *ngFor="let pokemon of pokemonList" class="col md4 s6">
-      <span>POKEMON : {{ pokemon.name }} </span>
-      <span>DE TYPE : {{ pokemon.types }}</span>
-      <img src={{pokemon.picture}} alt="Pokemon image" srcset="">
-      <span>{{pokemon.hp}}</span>
-    </p>
-
+    <div *ngFor="let pokemon of pokemonList" class="col md4 s6">
+      <div class="card horizontal">
+        <div class="card image">
+          <img src="{{ pokemon.picture }}" alt="Pokemon image" srcset="" />
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <p class="center">
+              <strong>{{ pokemon.name }}</strong>
+            </p>
+            <p class="red center">
+              <small>{{ pokemon.created }}</small>
+            </p>
+            <ul class="collection center">
+              <li class="collection-item">HP {{ pokemon.hp }}</li>
+              <li class="collection-item">CP {{ pokemon.cp }}</li>
+              <li class="collection-item">{{ pokemon.types }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-
-
-
