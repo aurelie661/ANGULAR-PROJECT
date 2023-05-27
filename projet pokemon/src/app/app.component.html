@@ -3,7 +3,10 @@
 <div class="container">
   <div class="row">
     <p *ngFor="let pokemon of pokemonList" class="col md4 s6">
-      Pokémon : {{ pokemon.name }} / de type : {{ pokemon.types }}
+      <span>POKEMON : {{ pokemon.name }} </span>
+      <span>DE TYPE : {{ pokemon.types }}</span>
+      <img src={{pokemon.picture}} alt="Pokemon image" srcset="">
+      <span>{{pokemon.hp}}</span>
     </p>
 
   </div>
