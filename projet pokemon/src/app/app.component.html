@@ -2,24 +2,19 @@
 
 <div class="container">
   <div class="row">
-    <div *ngFor="let pokemon of pokemonList" class="col md4 s6">
-      <div class="card horizontal">
+    <div *ngFor="let pokemon of pokemonList" class="col m4 s6">
+      <div class="card horizontal" pokemonBorderCard>
         <div class="card image">
-          <img src="{{ pokemon.picture }}" alt="Pokemon image" srcset="" />
+          <img [src]="pokemon.picture" alt="Pokemon image" />
         </div>
         <div class="card-stacked">
           <div class="card-content">
-            <p class="center">
+            <p>
               <strong>{{ pokemon.name }}</strong>
             </p>
-            <p class="red center">
+            <p>
               <small>{{ pokemon.created }}</small>
             </p>
-            <ul class="collection center">
-              <li class="collection-item">HP {{ pokemon.hp }}</li>
-              <li class="collection-item">CP {{ pokemon.cp }}</li>
-              <li class="collection-item">{{ pokemon.types }}</li>
-            </ul>
           </div>
         </div>
       </div>
