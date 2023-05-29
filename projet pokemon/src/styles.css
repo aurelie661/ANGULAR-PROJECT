@@ -9,7 +9,10 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
-h1{
-  font-size: 10em!important;
+h2{
+  font-size: 3em!important;
   margin: 70px 0 70px 0!important;
+}
+a{
+  cursor: pointer!important;
 }
