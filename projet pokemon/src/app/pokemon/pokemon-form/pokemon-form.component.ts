@@ -7,7 +7,7 @@ import { Router } from "@angular/router";
 @Component({
   selector: "app-pokemon-form",
   templateUrl: "./pokemon-form.component.html",
-  styleUrls: ['pokemon-form.component.css']
+  styleUrls: ["pokemon-form.component.css"],
 })
 export class PokemonFormComponent implements OnInit {
   @Input() pokemon: Pokemon;
@@ -45,7 +45,8 @@ export class PokemonFormComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log("submit form !");
-    this.router.navigate(["/pokemon", this.pokemon.id]);
+    this.pokemonService.updatePokemon(this.pokemon).subscribe(() => {
+      this.router.navigate(["/pokemon", this.pokemon.id]);
+    });
   }
 }
