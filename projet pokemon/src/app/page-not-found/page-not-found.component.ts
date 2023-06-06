@@ -10,9 +10,7 @@ import { Component } from '@angular/core';
         Retourner à l' accueil
       </a>
     </div>
-  `,
-  styles: [
-  ]
+  `
 })
 export class PageNotFoundComponent {
 

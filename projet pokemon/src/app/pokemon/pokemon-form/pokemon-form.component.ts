@@ -45,12 +45,20 @@ export class PokemonFormComponent implements OnInit {
     }
     return true;
   }
+  
+  clearInput() {
+    if (this.isAddForm) {
+      this.pokemon.name = "";
+    }
+  }
 
   onSubmit() {
     if (this.isAddForm) {
-      this.pokemonService.addPokemon(this.pokemon).subscribe((pokemon: Pokemon) => {
-        this.router.navigate(["/pokemon", pokemon.id]);
-      });
+      this.pokemonService
+        .addPokemon(this.pokemon)
+        .subscribe((pokemon: Pokemon) => {
+          this.router.navigate(["/pokemon", pokemon.id]);
+        });
     } else {
       this.pokemonService.updatePokemon(this.pokemon).subscribe(() => {
         this.router.navigate(["/pokemon", this.pokemon.id]);
