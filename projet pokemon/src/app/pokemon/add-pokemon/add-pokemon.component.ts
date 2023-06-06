@@ -1,5 +1,4 @@
-import { OnInit } from "@angular/core";
-import { Component } from "@angular/core";
+import { Component,OnInit } from "@angular/core";
 import { Pokemon } from "../pokemon";
 
 @Component({
@@ -7,8 +6,7 @@ import { Pokemon } from "../pokemon";
   template: `
     <h2 class="center">Ajouter un pokemon</h2>
     <app-pokemon-form [pokemon]="pokemon"></app-pokemon-form>
-  `,
-  styles: [],
+  `
 })
 export class AddPokemonComponent implements OnInit {
   pokemon: Pokemon;

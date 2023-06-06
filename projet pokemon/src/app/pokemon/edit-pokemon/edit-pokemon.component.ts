@@ -11,8 +11,7 @@ import { PokemonService } from "../pokemon.service";
       <img [src]="pokemon.picture" alt="" />
     </p>
     <app-pokemon-form *ngIf="pokemon" [pokemon]="pokemon"></app-pokemon-form>
-  `,
-  styles: [],
+  `
 })
 export class EditPokemonComponent implements OnInit {
   pokemon: Pokemon | undefined;
@@ -24,9 +23,8 @@ export class EditPokemonComponent implements OnInit {
   ngOnInit() {
     const pokemonId: string | null = this.route.snapshot.paramMap.get("id");
     if (pokemonId) {
-      this.pokemonService
-        .getPokemonById(+pokemonId)
-        .subscribe((pokemon) => (this.pokemon = pokemon));
+      this.pokemonService.getPokemonById(+pokemonId)
+        .subscribe(pokemon => this.pokemon = pokemon);
     } else {
       this.pokemon = undefined;
     }
