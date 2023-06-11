@@ -33,10 +33,10 @@
         <a
           (click)="login()"
           class="waves-effect waves-light btn"
-          *ngIf="!authService.isLoggedIn"
+          *ngIf="!auth.isLoggedIn"
           >Se connecter</a
         >
-        <a (click)="logout()" *ngIf="authService.isLoggedIn">Se déconnecter</a>
+        <a (click)="logout()" *ngIf="auth.isLoggedIn">Se déconnecter</a>
       </div>
     </div>
   </div>
