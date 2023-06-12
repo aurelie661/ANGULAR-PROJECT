@@ -4,8 +4,10 @@
     <a
       class="btn-floating btn-large waves-effect waves-light red z-depth-3"
       style="position: fixed; top: 65px; right: 25px"
-      (click)="logout()" *ngIf="auth.isLoggedIn">
-      logout
+      (click)="logout()"
+      *ngIf="auth.isLoggedIn"
+    >
+      Logout
     </a>
     <div *ngFor="let pokemon of pokemonList" class="col s6 m4">
       <a
